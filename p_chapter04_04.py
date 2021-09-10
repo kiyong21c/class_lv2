@@ -39,7 +39,7 @@ print(d_frozen, id(d_frozen))   # {'key1': 'value1'} 140586226343312
 d['key2'] = 'value2' # 해당 하는 키가 없을때는 추가됨
 print(d)
 
-
+# set 선언하는 방법
 s1 = {'Apple', 'Orange', 'Apple', 'Orange', 'Kiwi'} # set() 함수를 사용하는것보다 직접 set에 넣는것이 속도측면에서 유리
 s2 = set(['Apple', 'Orange', 'Apple', 'Orange', 'Kiwi'])
 s3 = {3}
