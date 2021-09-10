@@ -1,1 +1,1 @@
-git test
+git_test = 1
