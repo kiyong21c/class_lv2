@@ -3,12 +3,17 @@
 # 클로저 기초
 # 외부에서 호출된 함수의 변수값, 상태(레퍼런스) 복사 후 저장 → 후에 접근(엑세스) 가능하도록 도와줌
 
+# Closure 조건
+# 1. 어떤 함수의 내부함수일 것
+# 2. 그 내부함수가 외부함수의 자유변수를 참조할 것
+# 3. 외부 함수가 내부함수를 리턴할 것
+
 # Closure 사용
 def closure_ex1():
     # Free variable(자유변수) : 내가 사용하려는 함수 바깥에서 선언된 변수, 값이 보존되어있음
     # 클로저 영역
     series = [] # 함수의 호출이 끝나도 series 는 보존되어있음
-    def averager(v):
+    def averager(v):    # averager함수가 클로저
         series.append(v)
         print('inner>>>{}/{}'.format(series, len(series)))
         return sum(series) / len(series)
