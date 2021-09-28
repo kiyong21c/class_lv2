@@ -28,6 +28,15 @@ temp = iter(generator_ex1())
 # End
 # StopIteration
 
+'''
+클래스 이용시 __iter__있어야 iter()사용가능
+1. __next__ 있으면, next() 사용가능
+2. __iter__ 있으면, iter() 사용가능
+3. iter() 하면 __next__ 생겨서 next() 사용가능
+함수 이용시 yield사용하면 __iter__,__next__생김
+1. yield 있으면, next()
+'''
+
 for v in generator_ex1():   #### 제너레이터는 for문 등으로 호출
     # print(v)
     pass
